@@ -6,11 +6,112 @@
 	padding: 0;
 }
 
+html {
+	font-size: 62.5%;
+}
+
 body {
 	display: flex;
 	justify-content: center;
-	align-items: center;
-  height: 100vh;
-	background-color: #333;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: normal;
+	height: 100vh;
+	background-color: #8ec5fc;
+	background-image: linear-gradient(180deg, #8ec5fc 0%, #ffffff 100%);
 }
 
+#todo-app {
+	display: flex;
+	flex-direction: column;
+	margin-top: 10em;
+	margin-inline: 1em;
+	width: 800px;
+	text-align: center;
+	border-radius: 10px;
+	overflow: hidden;
+
+	header {
+		background-color: #ffffff81;
+
+		h1 {
+			padding: 0.5em 0 0.5em 0;
+			font-size: 2.5rem;
+			color: #3998f8;
+		}
+	}
+
+	.input-field {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin: 1em auto;
+		width: 80%;
+		gap: 0.5em;
+
+		input {
+			padding: 0.4em;
+			font-size: 2rem;
+			font-weight: 400;
+			border-radius: 10px;
+			border: none;
+		}
+
+		.input-btns {
+			position: relative;
+			display: flex;
+			align-self: center;
+
+			.add,
+			.clear {
+				padding: 0.5em 0.6em;
+				width: 8em;
+				font-size: 1.6rem;
+				font-weight: 600;
+				border-radius: 10px;
+				border: none;
+				cursor: pointer;
+			}
+
+			.add {
+				margin-right: 1em;
+				background-color: #60f760d0;
+			}
+
+			.clear {
+				margin-left: 1em;
+			}
+		}
+	}
+
+	.listOfThings {
+		display: flex;
+		justify-content: center;
+		margin-top: 1.5em;
+		width: 100%;
+
+		ul {
+			list-style: none;
+			width: 80%;
+			li {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				margin-bottom: 0.5em;
+				padding-left: 0.5em;
+				font-size: 1.6rem;
+				background-color: #ffffff;
+				border-radius: 10px;
+
+				.btn-item {
+					button {
+						padding: 0.4em;
+						margin-inline: 0.3em;
+						border: none;
+						background-color: #ffffff;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}

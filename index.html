@@ -5,6 +5,16 @@
 		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Vite App</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/f0de3a3824.js"
+			crossorigin="anonymous"
+		></script>
 	</head>
 	<body>
 		<div id="todo-app">
@@ -12,35 +22,44 @@
 				<h1>ToDo App</h1>
 			</header>
 			<div class="input-field">
-				<input type="text" />
-				<button class="add">Add</button>
-				<button class="clear">clear</button>
+				<input type="text" placeholder="Write task" required="true" />
+				<div class="input-btns">
+					<button class="add">Add</button>
+					<button class="clear">Clear</button>
+				</div>
 			</div>
 			<div class="listOfThings">
 				<ul>
-					<li data-id="item1">wash a car
-						<button><i class="fa-solid fa-check"></i></button>
-						<button><i class="fa-solid fa-x"></i></button>
-						<button><i class="fa-solid fa-trash"></i></button>
+					<li data-id="item1">
+						wash a car
+						<div class="btn-item">
+							<button><i class="fa-solid fa-check"></i></button>
+							<button><i class="fa-solid fa-pen-to-square"></i></button>
+							<button><i class="fa-solid fa-trash"></i></button>
+						</div>
 					</li>
 
-					<li data-id="item2">charge battery
-						<button><i class="fa-solid fa-check"></i></button>
-						<button><i class="fa-solid fa-x"></i></button>
-						<button><i class="fa-solid fa-trash"></i></button>
+					<li data-id="item2">
+						charge battery
+						<div class="btn-item">
+							<button><i class="fa-solid fa-check"></i></button>
+							<button><i class="fa-solid fa-pen-to-square"></i></button>
+							<button><i class="fa-solid fa-trash"></i></button>
+						</div>
 					</li>
 
-					<li data-id="item3">go for a walk
-						<button><i class="fa-solid fa-check"></i></button>
-						<button><i class="fa-solid fa-x"></i></button>
-						<button><i class="fa-solid fa-trash"></i></button>
+					<li data-id="item3">
+						go for a walk
+						<div class="btn-item">
+							<button><i class="fa-solid fa-check"></i></button>
+							<button><i class="fa-solid fa-pen-to-square"></i></button>
+							<button><i class="fa-solid fa-trash"></i></button>
+						</div>
 					</li>
-					
-					
 				</ul>
 			</div>
 		</div>
-	
+
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>
