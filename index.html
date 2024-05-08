@@ -22,10 +22,15 @@
 				<h1>ToDo App</h1>
 			</header>
 			<div class="input-field">
-				<input type="text" placeholder="Write task" required="true" />
+				<input
+					type="text"
+					class="input-task"
+					placeholder="Write task"
+					required="true"
+				/>
 				<div class="input-btns">
 					<button class="add">Add</button>
-					<button class="clear">Clear</button>
+					<button class="clear">Clear All</button>
 				</div>
 			</div>
 			<div class="listOfThings">
@@ -33,30 +38,21 @@
 					<li data-id="item1">
 						wash a car
 						<div class="btn-item">
-							<button><i class="fa-solid fa-check"></i></button>
-							<button><i class="fa-solid fa-pen-to-square"></i></button>
-							<button><i class="fa-solid fa-trash"></i></button>
-						</div>
-					</li>
-
-					<li data-id="item2">
-						charge battery
-						<div class="btn-item">
-							<button><i class="fa-solid fa-check"></i></button>
-							<button><i class="fa-solid fa-pen-to-square"></i></button>
-							<button><i class="fa-solid fa-trash"></i></button>
-						</div>
-					</li>
-
-					<li data-id="item3">
-						go for a walk
-						<div class="btn-item">
-							<button><i class="fa-solid fa-check"></i></button>
-							<button><i class="fa-solid fa-pen-to-square"></i></button>
-							<button><i class="fa-solid fa-trash"></i></button>
+							<button class="done tool"><i class="fa-solid fa-check"></i></button>
+							<button class="edit tool"><i class="fa-solid fa-pen-to-square"></i></button>
+							<button class="delete tool"><i class="fa-solid fa-trash"></i></button>
 						</div>
 					</li>
 				</ul>
+			</div>
+
+			<div class="todo-panel">
+				<h2>Change Your Task</h2>
+				<input type="text" class="input-task-panel" placeholder="edit" />
+				<div class="input-btns">
+					<button class="add change-panel">Change</button>
+					<button class="clear close-panel">Close</button>
+				</div>
 			</div>
 		</div>
 

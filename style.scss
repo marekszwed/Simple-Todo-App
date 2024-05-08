@@ -23,7 +23,6 @@ body {
 #todo-app {
 	display: flex;
 	flex-direction: column;
-	// align-items: center;
 	margin-top: 10em;
 	margin-inline: 1em;
 	width: 800px;
@@ -82,40 +81,6 @@ body {
 		margin: 1em auto;
 		width: 80%;
 		gap: 0.5em;
-
-		// input {
-		// 	padding: 0.4em;
-		// 	font-size: 2rem;
-		// 	font-weight: 400;
-		// 	border-radius: 10px;
-		// 	border: none;
-		// }
-
-		// .input-btns {
-		// 	position: relative;
-		// 	display: flex;
-		// 	align-self: center;
-
-		// 	.add,
-		// 	.clear {
-		// 		padding: 0.5em 0.6em;
-		// 		width: 8em;
-		// 		font-size: 1.6rem;
-		// 		font-weight: 600;
-		// 		border-radius: 10px;
-		// 		border: none;
-		// 		cursor: pointer;
-		// 	}
-
-		// 	.add {
-		// 		margin-right: 1em;
-		// 		background-color: #60f760d0;
-		// 	}
-
-		// 	.clear {
-		// 		margin-left: 1em;
-		// 	}
-		// }
 	}
 
 	.listOfThings {
@@ -167,7 +132,6 @@ body {
 		align-self: center;
 		text-align: center;
 		width: 350px;
-		// margin-inline: 1em;
 		padding: 1em;
 		top: 50%;
 		left: 50%;
@@ -175,14 +139,17 @@ body {
 		background-color: #606af18c;
 		border-radius: 10px;
 		z-index: 100;
-		// visibility: hidden;
 
 		h2 {
 			margin-bottom: 1em;
 		}
 
-		.input-task {
+		.input-task-panel {
 			margin-bottom: 1em;
 		}
+	}
+
+	.active {
+		display: flex;
 	}
 }

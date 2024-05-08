@@ -1,16 +1,15 @@
 let number = 0;
 let todoInput;
 let newTask;
-let oldTask;
 let allTasks;
 let todoUlElement;
 let addBtn;
 let clearAllBtn;
-let listOfThingsTodo;
-let btnToolsList;
 let todoPanel;
+let panelEditInput
 let closePanelBtn;
 let changeTodoBtn;
+let todoToEdit
 let newTodoEdit
 
 const main = () => {
@@ -23,10 +22,8 @@ const DomElements = () => {
 	clearAllBtn = document.querySelector('.clear');
 	todoInput = document.querySelector('input');
 	todoUlElement = document.querySelector('ul');
-	btnToolsList = document.querySelectorAll('.tool');
-	listOfThingsTodo = document.querySelector('.listOfThings');
 	todoPanel = document.querySelector('.todo-panel');
-
+	panelEditInput = document.querySelector('.input-task-panel')
 	closePanelBtn = document.querySelector('.close-panel');
 	changeTodoBtn = document.querySelector('.change-panel');
     
@@ -38,6 +35,7 @@ const DomEvents = () => {
 	clearAllBtn.addEventListener('click', deleteAllTasks);
 	todoUlElement.addEventListener('click', checkClick);
 	closePanelBtn.addEventListener('click', closeTodoPanel);
+	changeTodoBtn.addEventListener('click', changeTask)
 };
 
 const addNewTask = () => {
@@ -49,7 +47,7 @@ const addNewTask = () => {
 
 		todoUlElement.appendChild(newTask);
 		console.log(newTask.getAttribute('id'));
-
+		todoInput.value = ''
 		addToolsBtnPanel();
 	} else {
 		console.error('Empty input field');
@@ -97,17 +95,24 @@ const removeTheTask = (e) => {
 
 const completeTask = (e) => {};
 const editTask = (e) => {
-    newTodoEdit = todoPanel.value
+    todoToEdit = e.target.closest('li')
+	panelEditInput.value = todoToEdit.firstChild.textContent
+	console.log(newTodoEdit);
     
-	todoPanel.style.display = 'flex';
+	todoPanel.classList.add('active');
 };
+
+const changeTask = () => {
+	todoToEdit.firstChild.textContent = panelEditInput.value
+	todoPanel.classList.remove('active')
+}
 
 const closeTodoPanel = () => {
 	todoPanel.style.display = 'none';
 };
 
 const deleteAllTasks = () => {
-	console.log(typeof allTasks);
+	console.log(allTasks);
 };
 
 document.addEventListener('DOMContentLoaded', main);
